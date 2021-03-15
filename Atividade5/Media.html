@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Modal Hellow Word</h2>
+  <label for="fname">Nome:</label>
+  <input type="text" id="fnome" name="fname"><br><br>
+  <label for="fname">Primeira Nota:</label>
+  <input type="text" id="pnota" name="fname"><br><br>
+  <label for="fname">Segunda Nota:</label>
+  <input type="text" id="snota" name="fname"><br><br>
+  <label for="fname">Terceira Nota:</label>
+  <input type="text" id="tnota" name="fname"><br><br>
+  <input type="text" id="resultado" name="fname" disabled><br><br>
+  <button type="button" class="btn btn-info btn-lg" onclick="calcular()">Calcular</button>
+  
+</div>
+
+</body>
+
+<script>
+function calcular(){
+    var nome = document.getElementById("fnome");
+    var p1 = document.getElementById("pnota").value;
+    var p2 = document.getElementById("snota").value;
+    var p3 = document.getElementById("tnota").value;
+    var resultado = document.getElementById("resultado");
+    p1 = parseFloat(p1);
+    p2 = parseFloat(p2);
+    p3 = parseFloat(p3);
+    var notaF = (p1+p2+p3)/3;
+    resultado.value = notaF;
+}
+</script>
+</html>
