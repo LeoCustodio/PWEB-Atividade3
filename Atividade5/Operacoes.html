@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Operações</h2>
+  <label for="fname">Digite 2 números:</label><br><br>
+  <label for="fname">Primeiro:</label>
+  <input type="text" id="pnumero" name="fname"><br><br>
+  <label for="fname">Segundo:</label>
+  <input type="text" id="snumero" name="fname"><br><br>
+  <label for="fname">Soma:</label>
+  <input type="text" id="soma" name="fname" disabled><br><br>
+  <label for="fname">Subtração do primeiro com o segundo:</label>
+  <input type="text" id="subtracao" name="fname" disabled><br><br>
+  <label for="fname">Produto:</label>
+  <input type="text" id="produto" name="fname" disabled><br><br>
+  <label for="fname">Divisão do primeiro pelo segundo:</label>
+  <input type="text" id="divisao" name="fname" disabled><br><br>
+  <label for="fname">Resto da divisao do primeiro pelo segundo:</label>
+  <input type="text" id="resto" name="fname" disabled><br><br>
+  <button type="button" class="btn btn-info btn-lg" onclick="calcular()">Calcular</button>
+  
+</div>
+
+</body>
+
+<script>
+function calcular(){
+    var nome = document.getElementById("fnome");
+    var p1 = document.getElementById("pnumero").value;
+    var p2 = document.getElementById("snumero").value;
+    var soma = document.getElementById("soma");
+    var subtracao = document.getElementById("subtracao");
+    var produto = document.getElementById("produto");
+    var divisao = document.getElementById("divisao");
+    var resto = document.getElementById("resto");
+    p1 = parseFloat(p1);
+    p2 = parseFloat(p2);
+    soma.value=p1+p2;
+    subtracao.value=p1-p2;
+    produto.value=p1*p2;
+    divisao.value=p1/p2;   
+    console.log(soma,subtracao,produto,divisao);
+}
+</script>
+</html>
